@@ -85,6 +85,8 @@
           @media screen and (max-width:700px){
                 header{
                   grid-template-columns: 1fr 1fr 1fr 1fr;
+                  padding-Bottom:5px;
+                  
 
                 }
                 .box{
@@ -118,8 +120,9 @@
                     height: 150px;
                 }
 
-              .menus-container{
-                  width:50%;
+              ..menus-container>ul{
+                  grid-template-columns: repeat(5, 100px);
+                  
               }
                 
         
