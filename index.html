@@ -281,8 +281,68 @@
                
             }
                    
+.container_parent *{
+                    font-size: 14px;
+                }
+                .cart-name h2{
+                    font-size: 12px;
+                }
+                .cart_containers{
+                    z-index: 999;
+                    position: fixed;
+                    top: 60px;
+                    left: 0px;
+                    overflow: scroll;
+                }
+       .container_parent{
+            display: grid;
+            grid-template-columns: 1fr;  
+            z-index: 999;
+       }
+       
+    .cart_container{
+     
+        width: 100%;
+        display: none;
+     background-color: gray;
+       
+    }
+    .cart_box{
+      
+        display: grid;
+        grid-template-columns: 100px 1fr 40px;
+        grid-template-rows: 100px 1fr;
+        height: 150px;
+        column-gap: 10px;
+        row-gap: 5px;
+    
+    }
+    .cart-quantity{
+        grid-column: 1;
+        grid-row: 2;
+       
+    }
+    .cart-delete{
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+    .price_container{
+        width: 100%;
+        
+     
+        
+    }
+    .rating{
+        column-gap: 10px;
+    }
+    .cart-name *{
+        font-size: 10px;
+    
 
             }
+
+        }
+            
         </style>
         <header>
             <div class="box">
@@ -1388,16 +1448,28 @@
             var target = document.getElementsByClassName('cart_container')[0];
             target.appendChild(celem);
 
-
+            
             var counter = document.getElementsByClassName('cart-counter')[0].firstElementChild.innerHTML = titleTar.length;
             var titles = document.getElementsByClassName('qitem')[0].innerHTML = titleTar.length;
+            var cart_container = document.getElementsByClassName('cart_container')[0].style.height ="auto";
+            var cart_container = document.getElementsByClassName('cart_container')[0].style.display ="block";
+            var cparent = document.getElementsByClassName('container_parent')[0].style.justifyContent="center";
 
+            
+           
+            
+            
+
+            
 
             grandCalculation();
             removeButton();
             QuantityIncDec();
         }
-
+      
+           
+        
+    
 
         function grandCalculation() {
             var getCartAmt = document.getElementsByClassName('final_total');
@@ -1457,6 +1529,12 @@
                             var remove_td = document.getElementsByClassName('product_billings')[0];
                             var t_td = title_td[i].parentElement;
                             remove_td.removeChild(t_td);
+                            
+                        }
+                        if(title_td.length<=0)
+                        {   
+                            var cart_container = document.getElementsByClassName('cart_container')[0].style.display="none";
+                            var cparent = document.getElementsByClassName('container_parent')[0].style.justifyContent="flex-end";
                         }
                     }
 
@@ -1487,6 +1565,12 @@
                     var t_td = title_td[i].parentElement;
                     remove_td.removeChild(t_td);
                 }
+                if(title_td.length<=0)
+                        {   
+                            var cart_container = document.getElementsByClassName('cart_container')[0].style.display="none";
+                            var cparent = document.getElementsByClassName('container_parent')[0].style.justifyContent="flex-end";
+                       
+                        }
             }
 
             var titleTar = document.getElementsByClassName('ctitle');
