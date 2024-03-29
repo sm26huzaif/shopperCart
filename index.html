@@ -1525,9 +1525,7 @@ table button {
                     <tr>
                         <td colspan="2" class="placeOrder"><button>Place Order</button></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
+                
 
                 </table>
 
@@ -2543,12 +2541,12 @@ table button {
         cartButton.addEventListener('click', () => {
             targetCart.classList.toggle('cart-show-hide');
             header.style.zIndex="999";
-            if (document.body.style.overflow == "scroll") {
-                document.body.style.overflow = "hidden";
-            } else {
-                document.body.style.overflow = "scroll";
+            // if (document.body.style.overflow == "scroll") {
+            //     document.body.style.overflow = "hidden";
+            // } else {
+            //     document.body.style.overflow = "scroll";
 
-            }
+            // }
         })
     }
 
