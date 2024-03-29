@@ -1228,13 +1228,18 @@
         /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
         padding: 2px;
         box-shadow: 0px 0px 2px .5px rgba(0, 0, 0, 0.3);
+    
         
 
     }
     .cart-name{
             display: grid;
             grid-template-rows:repeat(auto-fit,minmax(40px,1fr),4);
-            align-content: space-around;
+            align-content:space-around;
+        }
+        .cart-img{
+            height:200px;
+            overflow: hidden;
         }
         .cart-img img{
             width: 100%;
@@ -1310,6 +1315,7 @@ table button {
     cursor: pointer;
 
 }
+
     
         
     @media screen and (max-width:768px) {
@@ -1332,9 +1338,14 @@ table button {
         height: auto;
         
         }
+        .cart-img{
+            height:100px;
+            overflow: hidden;
+        }
 
         .cart-name{
             row-gap: 5px;
+            align-content: space-around;
         }
 
         .cart-quantity{
@@ -1618,7 +1629,7 @@ table button {
             var iHtml = `
                 
                         <div class="cr cart-img">
-                        <img src="${pimage}" alt="">
+                        <img src="${pimage}" alt="" width="100px">
                     </div>
                     <div class="cr cart-name">
                         <h2 class='ctitle'>${ptitle}</h2><br>
