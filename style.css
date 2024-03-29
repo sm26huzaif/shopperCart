@@ -265,6 +265,7 @@ header {
     flex-wrap: wrap;
     column-gap: 10px;
     background-color: var(--primary-color);
+     z-index: 1;
 }
 
 .box {
