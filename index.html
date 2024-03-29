@@ -1208,6 +1208,8 @@
         height: auto;
         display: grid;
         row-gap: 10px;
+        overflow: scroll;
+       
         
     }
 
@@ -1328,6 +1330,14 @@ table button {
          
             top: 95px;
       
+        }
+        .container_parent{
+            flex-direction: column;
+        }
+        .cart_container{
+            flex-grow:1;
+            flex-basis:calc(130px * 3);
+            background-color: yellowgreen;
         }
         .cart-name{
             display: grid;
