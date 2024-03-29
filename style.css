@@ -233,6 +233,8 @@ svg {
     height: auto;
     width: 100%;
     overflow: hidden;
+    
+    
 }
 
 .wblur {
@@ -265,7 +267,8 @@ header {
     flex-wrap: wrap;
     column-gap: 10px;
     background-color: var(--primary-color);
-     z-index: 999;
+    z-index: 1;
+  
 }
 
 .box {
@@ -300,6 +303,9 @@ header {
 .searchBtn {
     padding: 5px;
 }
+.box2{
+    z-index: 999;
+}
 
 .box2,
 .box3 {
@@ -311,6 +317,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-grow: .2;
+
 
 
 }
@@ -1165,7 +1172,7 @@ header {
 
 /* cart containers start */
 
-.cart_containers {
+/* .cart_containers {
     position: fixed;
     top: 61px;
     width: 100%;
@@ -1357,7 +1364,7 @@ table button {
     font-size: 12px;
     font-weight: bold;
 
-}
+} */
 /* cart containers end */
 
 
