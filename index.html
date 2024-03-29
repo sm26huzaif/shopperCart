@@ -1176,10 +1176,11 @@
             z-index: 1;
             clear: left;
             background-color: white;
+            box-sizing: border-box;
         }
 
     .container_parent{
-        width: 100%;
+        width: 96%;
         height:auto;
         position: absolute;
         top: 0px;
@@ -1191,6 +1192,7 @@
         row-gap: 10px;
         box-sizing: border-box;
         padding: 10px 10px;
+        overflow: hidden;
        
 
         
@@ -1278,7 +1280,7 @@
         }
 
 
-        table {
+    table {
     width: 100%;
     height: auto;
     background-color: var(--secondary-color);
@@ -1352,11 +1354,7 @@ table button {
         .price_container{
             flex-grow: 1;
         }
-        .cart-show-hide {
-    height: 100%;
-    overflow:scroll;
-    transition: .5s;
-}
+ 
         .cart_box{
         display: grid;
         grid-template-columns: 100px 1fr 40px;
@@ -1454,6 +1452,9 @@ table button {
 } 
 .price_container h2{
     font-family: "Anta", sans-serif;
+}
+.price_container caption h2{
+    font-size: 14px;
 }
 
     }
