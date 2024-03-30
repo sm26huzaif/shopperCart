@@ -477,7 +477,10 @@ header {
     position: relative;
     background-color: black;
 }
-
+.menus-container ul li img {
+    width: 20px;
+    height: 20px;
+}
 .menus-container>ul li img {
     width: 100%;
     height: 100%;
