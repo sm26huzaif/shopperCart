@@ -453,28 +453,29 @@ header {
 .menus-container {
     width: 100%;
     height: auto;
-    display: flex;
-   
+    display: grid;
     padding: 10px;
     font-family: "Anta", sans-serif;
     font-weight: bold;
-    text-align: left;
+
     cursor: pointer;
+
 
 }
 
 .menus-container>ul {
-    width: 80%;
+
     display: grid;
     grid-template-columns: repeat(5, 250px);
     text-align: center;
     list-style: none;
     column-gap: 10px;
-   
+    justify-content: center;
 }
 
 .menus-container ul li {
     position: relative;
+    background-color: black;
 }
 
 .menus-container>ul li img {
