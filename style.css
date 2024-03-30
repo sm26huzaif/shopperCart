@@ -259,7 +259,7 @@ header {
     height: auto;
     margin: 0px auto;
     display: grid;
-    grid-template-columns:1fr 1fr 200px 200px;
+    grid-template-columns:400px 1fr 200px 200px;
     column-gap: 10px;
     padding: 0px 10px;
     align-items: center;
@@ -272,14 +272,17 @@ header {
 }
 
 .box {
-    flex-grow: .5;
+    display: flex;
+    flex-shrink: 1;
     height: 60px;
-
+    color:var(--secondary-color);
     text-align: center;
-
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
 }
 
-.box h1 {
+.box h1{
     font-size: 50px;
     font-family: "Anta", sans-serif;
     font-weight: 400;
@@ -287,21 +290,33 @@ header {
     color: var(--secondary-color);
     text-shadow: 5px 0px 2px rgb(0, 0, 0);
 }
+.box i{
+    font-size: 40px;
+}
 
 .box1 {
     /* background-color: white; */
-    background-color: #494949;
     flex-grow: 1;
     display: flex;
     column-gap: 5px;
 }
-
+.box1 input{
+    border: none;
+    outline: none;
+}
 .search {
     flex-grow: 1;
+    
 }
 
 .searchBtn {
     padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    background-color: var(--secondary-color);
 }
 .box2{
     z-index: 999;
@@ -417,16 +432,17 @@ header {
 .cart,
 .notifi {
     position: relative;
+    display: flex;
+    column-gap: 5px;
 }
 
 .cart-counter p,
 .noti-counter p {
-    position: absolute;
-    left: 10px;
-    top: 2px;
     font-size: 12px;
     text-align: center;
-    color: var(--primary-color);
+   
+   color: var(--secondary-color);
+
 }
 
 /* header end */
