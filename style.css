@@ -469,9 +469,8 @@ header {
     grid-template-columns: repeat(5, 250px);
     text-align: center;
     list-style: none;
-    justify-content: space-around;
-
-
+    column-gap: 10px;
+    justify-content: center;
 }
 
 .menus-container ul li {
